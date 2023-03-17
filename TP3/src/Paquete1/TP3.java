@@ -67,5 +67,15 @@ public class TP3 {
             }
         }
         System.out.println("La suma de todos los valores mayores a X es: " + suma);
+        
+        
+        // 2-
+        
+        String nombres = "Lucia,Sofía,Martina,Julia,Valeria,Camila,Paula,Josefina,Victoria,Mariana";
+        String nombresSplit[] = nombres.split(",");
+
+        System.out.println("Los diez nombres son: ");
+        for (String elemento : nombresSplit) {
+            System.out.println(elemento);
     }
 }
