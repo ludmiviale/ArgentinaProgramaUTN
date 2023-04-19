@@ -14,7 +14,7 @@ public class Main {
 
             Statement statement = connection.createStatement();
 
-            String query = "SELECT * FROM producto";
+            String query = "SELECT * FROM productos";
             ResultSet resultset = statement.executeQuery(query);
 
             System.out.println("ID PRECIO NOMBRE PRODUCTO:");
