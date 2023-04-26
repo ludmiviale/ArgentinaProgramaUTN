@@ -160,8 +160,6 @@ public class App {
 
             preparedSt.executeUpdate();
 
-            System.out.println("Carrito creado con éxito");
-
             // Obtener el último carrito creado
             query = ("SELECT idcarrito FROM carrito ORDER BY idcarrito DESC LIMIT 1");
             resultset = statement.executeQuery(query);
@@ -179,6 +177,9 @@ public class App {
                 preparedSt.setInt(3, listaItemCarrito.get(i).getCantidad());
                 preparedSt.executeUpdate();
             }
+
+            System.out.println("Carrito creado con éxito");
+            System.out.println("*********COMPRA FINALIZADA********");
 
             connection.close();
             scanner.close();
