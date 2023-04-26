@@ -2,20 +2,18 @@ package com.trabajofinal;
 
 public class Cliente {
 
-    String nombres;
-    String cuil;
-    String numeroTelefono;
-    String email;
+    private String nombres;
+    private String cuil;
+    private String telefono;
+    private String email;
 
-    public Cliente(String nombres, String cuil) {
-        this.nombres = nombres;
-        this.cuil = cuil;
+    public Cliente() {
     }
 
-    public Cliente(String nombres, String cuil, String numeroTelefono, String email) {
+    public Cliente(String nombres, String cuil, String telefono, String email) {
         this.nombres = nombres;
         this.cuil = cuil;
-        this.numeroTelefono = numeroTelefono;
+        this.telefono = telefono;
         this.email = email;
     }
 
@@ -27,20 +25,20 @@ public class Cliente {
         this.nombres = nombres;
     }
 
-    public String getcuil() {
+    public String getCuil() {
         return cuil;
     }
 
-    public void setcuil(String cuil) {
+    public void setCuil(String cuil) {
         this.cuil = cuil;
     }
 
-    public String getNumeroTelefono() {
-        return numeroTelefono;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setNumeroTelefono(String numeroTelefono) {
-        this.numeroTelefono = numeroTelefono;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public String getEmail() {
@@ -51,10 +49,8 @@ public class Cliente {
         this.email = email;
     }
 
-    public void getCliente() {
-        System.out.println("Nombre y apellido: " + nombres);
-        System.out.println("cuil: " + cuil);
-        System.out.println("Número de teléfono: " + numeroTelefono);
-        System.out.println("Email: " + email);
+    @Override
+    public String toString() {
+        return "Cliente [nombres=" + nombres + ", cuil=" + cuil + ", telefono=" + telefono + ", email=" + email + "]";
     }
 }

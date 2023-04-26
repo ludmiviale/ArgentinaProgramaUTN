@@ -1,38 +1,59 @@
 package com.trabajofinal;
 
+import java.util.List;
+
 public class Carrito {
 
-    private int num;
-    private Cliente cl;
+    private int id;
+    private Cliente cliente;
+    private List<ItemCarrito> items;
     private double montoTotal;
+    private double montoTotalconDescuento;
 
-    public Carrito(int num, Cliente cl) {
-        this.num = num;
-        this.cl = cl;
-        montoTotal = 0.0;
+    public int getId() {
+        return id;
     }
 
-    public int getNum() {
-        return num;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setNum(int num) {
-        this.num = num;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public Cliente getCl() {
-        return cl;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
-    public void setCl(Cliente cl) {
-        this.cl = cl;
+    public List<ItemCarrito> getItems() {
+        return items;
+    }
+
+    public void setItems(List<ItemCarrito> items) {
+        this.items = items;
     }
 
     public double getMontoTotal() {
         return montoTotal;
     }
 
-    public void setMontoTotal(ItemCarrito subtotal) {
-        montoTotal = montoTotal + subtotal.getSubtotal();
+    public void setMontoTotal(double montoTotal) {
+        this.montoTotal = montoTotal;
     }
+
+    public double getMontoTotalconDescuento() {
+        return montoTotalconDescuento;
+    }
+
+    public void setMontoTotalconDescuento(double montoTotalconDescuento) {
+        this.montoTotalconDescuento = montoTotalconDescuento;
+    }
+
+    @Override
+    public String toString() {
+        return "Monto Total = " + montoTotal + "\nMonto Final con Descuento = "
+                + montoTotalconDescuento;
+    }
+
 }

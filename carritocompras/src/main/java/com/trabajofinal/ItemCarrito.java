@@ -2,32 +2,20 @@ package com.trabajofinal;
 
 public class ItemCarrito {
 
-    private Carrito carrito;
-    private Producto prod;
+    private Item item;
     private int cantidad;
-    private double subtotal;
 
-    public ItemCarrito(Carrito num, Producto p, int cantidad) {
-        this.carrito = num;
-        this.prod = p;
+    public ItemCarrito(Item item, int cantidad) {
+        this.item = item;
         this.cantidad = cantidad;
-        subtotal = prod.getPrecio() * cantidad;
     }
 
-    public Carrito getCarrito() {
-        return carrito;
+    public Item getItem() {
+        return item;
     }
 
-    public void setCarrito(Carrito carrito) {
-        this.carrito = carrito;
-    }
-
-    public Producto getProd() {
-        return prod;
-    }
-
-    public void setProd(Producto prod) {
-        this.prod = prod;
+    public void setItem(Item item) {
+        this.item = item;
     }
 
     public int getCantidad() {
@@ -38,17 +26,8 @@ public class ItemCarrito {
         this.cantidad = cantidad;
     }
 
-    public double getSubtotal() {
-        return subtotal;
-    }
-
-    public void setSubtotal(double subtotal) {
-        this.subtotal = subtotal;
-    }
-
-    public void mostrarItem() {
-        System.out.println(
-                "Producto: " + prod.getNombre() + " - Cantidad: " + cantidad + " - Precio: " + prod.getPrecio());
-        System.out.println("Subtotal: " + subtotal);
+    @Override
+    public String toString() {
+        return item.getNombre() + "\t" + item.getPrecio() + "\t" + cantidad + "\n";
     }
 }
